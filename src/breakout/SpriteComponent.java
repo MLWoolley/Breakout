@@ -1,5 +1,3 @@
-package breakout;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -10,6 +8,8 @@ package breakout;
  *
  * @author Maddie
  */
+
+package breakout;
 
 import java.awt.Color;
 import java.awt.Graphics;

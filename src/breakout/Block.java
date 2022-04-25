@@ -26,9 +26,6 @@ public class Block extends SpriteComponent{
     
     public Block(int myPosX, int myPosY, int myWidth, int myHeight, String color) {
         super(myPosX, myPosY, myWidth, myHeight, Color.WHITE);
-        //what i will probably actually want to do is set these blocks to
-        //premade images e.g. pixel art, especially for when blocks
-        //degrade before being destroyed
         try {
             image = ImageIO.read(new File(fullPathName+color+"Block.jpeg"));
         } catch (IOException ex) {

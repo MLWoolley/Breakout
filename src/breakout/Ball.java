@@ -48,7 +48,6 @@ public class Ball extends Sprite{
         limY = panelHeight - height*2;
     }
     
-    //get bounds - this is actually the ball's position, due to the way it moves -- should this change?
     @Override
     public Rectangle getBounds() {
         return new Rectangle(posX, posY, width, height);
@@ -62,7 +61,7 @@ public class Ball extends Sprite{
     }
     
     public void move(int platMinX) {
-        //... Move the ball at the give velocity.
+        //... Move the ball at the given velocity.
         posX += velocityX;
         posY += velocityY;        
         
@@ -76,7 +75,7 @@ public class Ball extends Sprite{
             velocityX = -velocityX;  // Reverse direction.
         }
         //if touching platform, bounce
-        //at the very least, go left on the left-hand side of the platform
+        //left on the left-hand side of the platform
         //and right when bouncing off the right half
         if (posY + height > platY && posX > platMinX-width/2 && posX < platMinX + platWidth-width/2){
             posY = platY - height;
@@ -106,8 +105,6 @@ public class Ball extends Sprite{
         graphics.fillOval(0, 0, width, height);
     }
     
-    
-    //======================================================== setPosition
     public void setPosition(int x, int y) {
         posX = x;
         posY = y;

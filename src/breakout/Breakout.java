@@ -75,7 +75,6 @@ public class Breakout {
         //add component to top 40 pixels of jpanel
         int sw = 75;
         score.setBounds(frameWidth/2-(sw*3/4), 0, sw, 20);
-        //score.setPrefferedSize(0, 0, 840, 40); //trying this
         panel.add(score);
         
         //add cards
@@ -89,7 +88,7 @@ public class Breakout {
         JFrame frame = new JFrame(frameTitle);
         //create space at the edges of the game
         frame.getRootPane().setBorder(BorderFactory.createLineBorder(Color.BLACK, borderWidth));
-        frame.setContentPane(cards); // should be panel
+        frame.setContentPane(cards);
         //set application to end when window closed
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         //set dimensions of window
@@ -151,7 +150,7 @@ public class Breakout {
         
         //... Instance variables for the ball animiation
         int interval = 35;  // Milliseconds between updates.
-        Timer timer = new Timer(interval, null); // Timer fires to anmimate one step.
+        Timer timer = new Timer(interval, null); // Timer fires to animate one step.
         
         
         //from http://www.fredosaurus.com/notes-java/examples/animation/40BouncingBall/bouncingball.html
