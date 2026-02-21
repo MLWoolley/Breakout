@@ -10,6 +10,10 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.FileSystems;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Objects;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
@@ -22,12 +26,14 @@ public class Block extends SpriteComponent{
     
     boolean visible = true; //this is turned off when block is destroyed
     private BufferedImage image; //stores block image
-    String fullPathName = "/Users/Maddie/NetBeansProjects/Breakout/src/breakout/Images/";
+    String fileSeparator = FileSystems.getDefault().getSeparator();
+    String fullPathName = fileSeparator + "Images" + fileSeparator;
     
     public Block(int myPosX, int myPosY, int myWidth, int myHeight, String color) {
         super(myPosX, myPosY, myWidth, myHeight, Color.WHITE);
         try {
-            image = ImageIO.read(new File(fullPathName+color+"Block.jpeg"));
+            String filename = fullPathName + color + "Block.jpeg";
+            image = ImageIO.read(getClass().getResource(filename));
         } catch (IOException ex) {
             Logger.getLogger(Block.class.getName()).log(Level.SEVERE, null, ex);
         }

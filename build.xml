@@ -70,4 +70,8 @@
     nbproject/build-impl.xml file. 
 
     -->
+    <copy todir="dist">
+        <fileset dir="src\breakout"
+                 includes="\Images\*.jpeg" />
+    </copy>
 </project>

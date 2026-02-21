@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Breakout">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/Breakout.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
