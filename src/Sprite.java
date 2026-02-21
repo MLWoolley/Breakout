@@ -9,23 +9,21 @@
  * @author Maddie
  */
 
-package breakout;
-
 import java.awt.Color;
 import java.awt.Graphics;
-import javax.swing.JComponent;
+import javax.swing.JPanel;
 /**
  *
  * @author Maddie
  */
-abstract class SpriteComponent extends JComponent {
+abstract class Sprite extends JPanel {
     int posX;
     int posY;
     int width;
     int height;
     Color color;
     
-    SpriteComponent(int myPosX, int myPosY, int myWidth, int myHeight, Color myColor){
+    Sprite(int myPosX, int myPosY, int myWidth, int myHeight, Color myColor){
         width = myWidth;
         height = myHeight;
         posX = myPosX;
